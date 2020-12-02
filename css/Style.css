@@ -1,0 +1,127 @@
+:root{
+    --fondo-body: whitesmoke;
+    --fondo-header: #F4D03F;
+    --fondo-ctn:#0001;
+    --fondo-secciones: rgba(3, 25, 87, 0.534);
+
+    --color-nav-link: #A9CCE3;
+    
+    --font-size:30px;
+    --font-color1:#34495E ;
+    --font-color2:#D6DBDF;
+
+    --font-fami1:'Segoe UI';
+    --font-fami2:'Segoe UI', cursive;
+}
+html{
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+*,
+*::before,
+*::after{
+    margin: 0;
+    box-sizing: inherit;
+}    
+body{
+    background-color: var(--fondo-body);
+}
+h1{
+    font-size: var(--font-size);
+    color: var(--font-color1);
+    font-family: var(--font-fami1);
+    }
+h2{
+    text-align: center;
+    font-size: var(--font-size);
+    color: var(--font-color2);
+    font-family: var(--font-fami2);
+}
+    
+    /* header cabezera  */
+.cabezera{
+    background-color: var(--fondo-header);
+    position:sticky;
+    top:0;
+    padding:1rem;
+}
+.cabezera h1 {
+    margin-left:80%;
+}
+/*secciones*/
+.ctn-secciones{
+    width: 95%;
+    height: 90vh;
+    margin:2% auto;
+    z-index:2;
+}
+.ctn-secciones .secciones{
+    background-color: var(--fondo-secciones);
+    width:100%;
+    height: 70vh;
+    margin-bottom: 0.5%;
+}
+/*boton menu*/
+.btn-menu{
+    background-color: var(--fondo-header);
+    position: fixed;
+    bottom:1vh;
+    right:1vw;
+    width: 4rem;
+    height:4rem;
+    border-radius: 50%;
+    padding:0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index:999;
+}
+/* panel-menu*/
+.panel-menu{
+    background-color:var(--font-color2);
+    position:fixed;
+    width:100%;
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+    display: flex;
+    flex-direction: column;
+    justify-content:space-evenly;
+    z-index:998;
+    transform: translate(-100%,0);
+    transition:transform .6s ease;
+    
+}
+.active-menu{
+    transform: translate(0,0);
+}
+.panel-menu .ctn-link{
+    width:inherit;
+    display: flex;
+    flex-direction: column;
+    justify-content:space-between;
+    align-items: center;
+    text-align: center;
+    background-color:var(--fondo-ctn);
+}
+
+.panel-menu .ctn-link .link-secciones{
+    padding: 2rem;
+    width: inherit;
+    display: block;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+.ctn-link .link-secciones h2{
+    color: var(--font-color1);
+    font-size: var(--font-size);
+    font-family: var(--font-fami1);
+
+}
+.ctn-link:hover{
+    background-color: var(--fondo-ctn);
+}
+.ctn-link .link-secciones:hover{
+    background-color: var(--fondo-header);
+}
