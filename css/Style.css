@@ -1,8 +1,8 @@
 :root{
-    --fondo-body: whitesmoke;
+    --fondo-body: #cae2e6;
     --fondo-header: #F4D03F;
     --fondo-ctn:#0001;
-    --fondo-secciones: rgba(3, 25, 87, 0.534);
+    --fondo-secciones: rgb(188, 220, 229);
 
     --color-nav-link: #A9CCE3;
     
@@ -36,7 +36,7 @@ h1,h3{
 h2{
     text-align: center;
     font-size: var(--font-size);
-    color: var(--font-color2);
+    color: var(--font-color1);
     font-family: var(--font-fami2);
 }
     
@@ -81,7 +81,7 @@ h2{
 } 
 /* panel-menu*/
 .panel-menu{
-    background-color:var(--font-color2);
+    background-color:var(--color-nav-link);
     position:fixed;
     width:100%;
     top:0;
