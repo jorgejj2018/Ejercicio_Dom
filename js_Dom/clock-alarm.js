@@ -24,25 +24,26 @@ export function clock(clock,btnPlay,btnStop){
 
 }
 
-export function clockAlarm(clock,btnPlay,btnStop){
-    let audioAlarm = `<audio src="./asset/alarm.mp3"autoplay></audio>`;
-    let imgAlarm = `<img src="./asset/alarm.jpg" class= "img-alarm">`
+export function clockAlarm(sound,btnPlay,btnStop){
+    let $audioAlarm = d.createElement('audio')
+    let $urlImg = './asset/alarm.jpg'
     let timeOut;
     let endTimOut;
-
+    
     const $bgAlamr = d.querySelector('#seccion1')
     
     d.addEventListener('click', e =>{
         
         if (e.target.matches(btnPlay)){
            timeOut = setTimeout(() =>{
-                d.querySelector(clock).innerHTML = `${audioAlarm}`;
-                $bgAlamr.style.backgroundImage= 'url("./asset/alarm.jpg")';
-                $bgAlamr.style.backgroundRepeat= 'no-repeat';
+                $audioAlarm.src = sound;
+                $audioAlarm.autoplay = true;
+                $bgAlamr.style.backgroundImage= `url(${$urlImg})`;
                 $bgAlamr.style.backgroundSize= 'cover';
-                /* endTimOut = setInterval(() => {
-                    d.querySelector(clock).innerHTML = `${audioAlarm}`;
-                },30000);; */
+                endTimOut = setInterval(() => {
+                    $audioAlarm.src = sound;
+                    $audioAlarm.autoplay = true;
+                },30000);;
             })
             e.target.disabled = true;
             d.querySelector('#clock-start').disabled = true;
@@ -52,12 +53,13 @@ export function clockAlarm(clock,btnPlay,btnStop){
         }
         if(e.target.matches(btnStop)){
             clearTimeout(timeOut)
-            d.querySelector(clock).innerHTML = null;
+            clearInterval(endTimOut)
+            $audioAlarm.pause();
+            $audioAlarm.currentTime = 0;
             d.querySelector(btnPlay).disabled = false;
             d.querySelector('#clock-start').disabled = false;
             d.querySelector('#clock-stop').disabled = false;
             $bgAlamr.style.backgroundImage=null;
-            $bgAlamr.style.backgroundRepeat= null;
             $bgAlamr.style.backgroundSize= null;
         }
         

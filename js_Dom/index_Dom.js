@@ -5,5 +5,5 @@ const d = document;
 d.addEventListener('DOMContentLoaded', (e) =>{
     hamburger('.btn-menu','.panel-menu','.ctn-link *')
     clock('#clock','#clock-start','#clock-stop')
-    clockAlarm('#clock','#alarm-start','#alarm-stop')
+    clockAlarm('./asset/alarm.mp3','#alarm-start','#alarm-stop')
 })
