@@ -4,14 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/Style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hamburgers/1.1.3/hamburgers.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hamburgers/1.1.2/hamburgers.min.css"/>
     <title>Ejercicio</title>
 </head>
 <body>
     <header class="cabezera">
         <h1>Ejercicios Dom</h1>
     </header>   
-    <button class="btn-menu hamburger hamburger--collapse" type="button">
+    <button class="btn-menu  hamburger--elastic" type="button">
         <span class="hamburger-box">
           <span class="hamburger-inner"></span>
         </span>
@@ -19,7 +19,7 @@
 
     <aside class="panel-menu ">
         <nav class="ctn-link">
-            <a href="#seccion1" class="link-secciones"><h2>Seccion 1</h2></a>
+            <a href="#seccion1" class="link-secciones"><h2>Reloj Digital & Alarma</h2></a>
             <a href="#seccion2" class="link-secciones"><h2>Seccion 2</h2></a>
             <a href="#seccion3" class="link-secciones"><h2>Seccion 3</h2></a>
             <a href="#seccion4" class="link-secciones"><h2>Seccion 4</h2></a>
@@ -29,7 +29,16 @@
 
     <main class="ctn-secciones">
         <section class="secciones" id="seccion1">
-            <h2 class="title-section">seccion 1</h2>
+            <h2 class="title-section">Reloj Digital & Alarma</h2>
+            <div class="ctn-clock">
+                <div id="clock"></div>
+                <div class="btn-clock" id="btn-clock">
+                    <button id="clock-start">Iniciar Reloj</button>
+                    <button id="clock-stop">Detener Reloj</button>
+                    <button id="alarm-start">Iniciar Alarma</button>
+                    <button id="alarm-stop">Detener Alarma</button>
+                </div>
+            </div>
         </section>
         <section class="secciones" id="seccion2">
             <h2 class="title-section">seccion 2</h2>
