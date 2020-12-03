@@ -25,8 +25,8 @@ export function clock(clock,btnPlay,btnStop){
 }
 
 export function clockAlarm(clock,btnPlay,btnStop){
-    let audioAlarm = `<audio src="/asset/alarm.mp3"autoplay></audio>`;
-    let imgAlarm = `<img src="/asset/alarm.jpg" class= "img-alarm">`
+    let audioAlarm = `<audio src="./asset/alarm.mp3"autoplay></audio>`;
+    let imgAlarm = `<img src="./asset/alarm.jpg" class= "img-alarm">`
     let timeOut;
     let endTimOut;
 
@@ -37,7 +37,7 @@ export function clockAlarm(clock,btnPlay,btnStop){
         if (e.target.matches(btnPlay)){
            timeOut = setTimeout(() =>{
                 d.querySelector(clock).innerHTML = `${audioAlarm}`;
-                $bgAlamr.style.backgroundImage= 'url("/asset/alarm.jpg")';
+                $bgAlamr.style.backgroundImage= 'url("./asset/alarm.jpg")';
                 $bgAlamr.style.backgroundRepeat= 'no-repeat';
                 $bgAlamr.style.backgroundSize= 'cover';
                 /* endTimOut = setInterval(() => {
