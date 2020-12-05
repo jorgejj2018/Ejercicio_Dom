@@ -156,3 +156,17 @@ h2{
     border-radius: 50%;
     margin-left:22%;
 }
+/* teclado */
+.ctn-ball{
+    background-color: var(--fondo-ctn);
+    width:80vw;
+    height: 40vh;
+    margin: 5% auto;
+}
+.ctn-ball .ball{
+    background-color: var(--fondo-header);
+    width: 5vw;
+    height: 5vh;
+    border-radius: 50%;
+    margin:10%  auto;
+}
