@@ -8,6 +8,7 @@
     
     --font-size:30px;
     --font-size-clock:18px;
+    --font-size-btnScroll:35px;
     --font-color1:#34495E ;
     --font-color2:#D6DBDF;
 
@@ -73,12 +74,73 @@ h2{
     height:4rem;
     border-radius: 50%;
     border:none;
+    outline: 0;
     padding:0;
     display: flex;
     justify-content: center;
     align-items: center;
     z-index:999;
 } 
+/* boton scroll */
+.btn-scroll{
+    background-color: var(--font-color1);
+    position: fixed;
+    bottom:1vh;
+    right:calc(2vw + 5vw);
+    width: 4rem;
+    height:4rem;
+    border-radius: 50%;
+    border:none;
+    outline: 0;
+    font-weight: bold;
+    font-size:var(--font-size-btnScroll);
+    color: var(--fondo-header);
+    cursor: pointer;
+    z-index:999;
+    transition: all 0.3s ease-out;
+}
+.btn-scroll:hover{
+background-color: var(--fondo-header);
+color: var(--font-color1);
+}
+.hidden-scroll{
+    visibility: hidden;
+    opacity:0;
+}
+/* boton dark mode */
+.mode{
+    background-color: var(--font-color1);
+    position: fixed;
+    bottom:1vh;
+    left:2vw;
+    width: 4rem;
+    height:4rem;
+    border-radius: 50%;
+    border:none;
+    outline: 0;
+    font-weight: bold;
+    font-size:var(--font-size-btnScroll);
+    color: var(--fondo-header);
+    cursor: pointer;
+    z-index:999;
+    transition: all 0.3s ease-out;
+}
+.modeDark{
+    position: fixed;
+    bottom:1vh;
+    left:2vw;
+    width: 4rem;
+    height:4rem;
+    border-radius: 50%;
+    border:none;
+    outline: 0;
+    font-weight: bold;
+    font-size:var(--font-size-btnScroll);
+    cursor: pointer;
+    z-index:999;
+    transition: all 0.3s ease-out;
+    
+}
 /* panel-menu*/
 .panel-menu{
     background-color:var(--color-nav-link);
