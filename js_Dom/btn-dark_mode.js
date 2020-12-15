@@ -24,14 +24,14 @@ export function btnMode(btnDark){
     }
 
     d.addEventListener('dblclick', (e) =>{
-        if(e.target.matches('.mode')){
+        if(e.target.matches('.mode') || e.target.matches(` ${btnDark} *`)){
             darkMode()
         }
 
     })
     
     d.addEventListener('click', e =>{
-        if(e.target.matches('.modeDark')){
+        if(e.target.matches('.modeDark') || e.target.matches(` ${btnDark} *`)){
             ModeNormal()
         }     
     })

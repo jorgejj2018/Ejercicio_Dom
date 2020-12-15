@@ -14,7 +14,7 @@ const $btnScroll = d.querySelector(btnScroll)
         }
     })
     d.addEventListener('click' , e =>{
-        if(e.target.matches('.btn-scroll')){
+        if(e.target.matches('.btn-scroll') || e.target.matches(` ${btnScroll} *`)){
         w.scrollTo({
             behavior:'smooth',
             top: 0,
