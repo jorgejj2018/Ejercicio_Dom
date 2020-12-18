@@ -44,6 +44,7 @@ h2{
     /* header cabezera  */
 .cabezera{
     background-color: var(--fondo-header);
+    width:100%;
     position:sticky;
     top:0;
     padding:1rem;
@@ -125,22 +126,23 @@ color: var(--font-color1);
     z-index:999;
     transition: all 0.3s ease-out;
 }
-.modeDark{
-    position: fixed;
-    bottom:1vh;
-    left:2vw;
-    width: 4rem;
-    height:4rem;
-    border-radius: 50%;
-    border:none;
-    outline: 0;
-    font-weight: bold;
-    font-size:var(--font-size-btnScroll);
-    cursor: pointer;
-    z-index:999;
-    transition: all 0.3s ease-out;
-    
+.mode:hover{
+    background-color:cadetblue;
 }
+.modeDark{ 
+    background-color:var(--font-color1);
+    color:var(--fondo-header);
+}
+.modeDark .cabezera{ 
+    background-color:#012;
+}
+.modeDark .cabezera h1{ 
+    Color:var(--fondo-header);
+}
+.modeDark .secciones{ 
+    background-color:var(--fondo-ctn) ;
+}
+
 /* panel-menu*/
 .panel-menu{
     background-color:var(--color-nav-link);

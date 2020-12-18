@@ -10,11 +10,11 @@ d.addEventListener('DOMContentLoaded', (e) =>{
     hamburger('.btn-menu','.panel-menu','.ctn-link *')
     clock('#clock','#clock-start','#clock-stop')
     clockAlarm('./asset/alarm.mp3','#alarm-start','#alarm-stop')
-    //countDown('ctn-time-back','May 03, 2021 00:00:00', 'Gracias por abrir mi mensaje: ...')
+    countDown('ctn-time-back','May 03, 2021 00:00:00', 'Gracias por abrir mi mensaje: ...')
     ScrollBtn('.btn-scroll')
-    btnMode('.mode')
 })
 
 d.addEventListener('keydown', (e) =>{
-     ball('.ctn-ball','.ball', e)
+    ball('.ctn-ball','.ball', e)
 })
+btnMode('.mode', 'modeDark')
