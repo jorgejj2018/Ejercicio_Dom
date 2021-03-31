@@ -7,6 +7,7 @@
     --color-nav-link: #A9CCE3;
     
     --font-size:30px;
+    --font-size2:15px;
     --font-size-clock:18px;
     --font-size-btnScroll:35px;
     --font-color1:#34495E ;
@@ -97,7 +98,7 @@ h2{
     font-size:var(--font-size-btnScroll);
     color: var(--fondo-header);
     cursor: pointer;
-    z-index:999;
+    z-index:99;
     transition: all 0.3s ease-out;
 }
 .btn-scroll:hover{
@@ -189,7 +190,8 @@ color: var(--font-color1);
 .ctn-link:hover{
     background-color: var(--fondo-ctn);
 }
-.ctn-link .link-secciones:hover{
+.ctn-link .link-secciones:hover,
+    .ctn-link .active:hover{
     background-color: var(--fondo-header);
 }
 
@@ -250,4 +252,174 @@ color: var(--font-color1);
 .ctn-responsive-js iframe{
     height:30vh;
     margin: auto;
+}
+
+/* Estado de red*/
+.online,
+.offline{
+    position: sticky;
+    top: 0;
+    padding: 1rem;
+    z-index: 1000;
+    font-size: 15px;
+    font-weight: bold;
+    text-align: center;
+    background-color: chartreuse;
+    color: whitesmoke;
+}
+.offline{
+    background-color: red;
+}
+
+/*cartas filtros*/
+
+.cards{
+display: grid;
+grid-template-columns: repeat(auto-fit,minmax(100px,1fr));
+}
+.card{
+    background-color: var(--fondo-body);
+    color:var(--font-color1);
+     transition: all 0.3s ease-out;
+}
+.card img{
+    width: 100%;
+    height: inherit;
+}
+.card figcaption{
+    padding: 1rem;
+}
+
+.filter{
+    /*display: none;*/
+    visibility: hidden;
+    opacity: 6;
+    order: 1;
+}
+.video-inteligente{
+    height: 25vh;
+    margin-left: 30%;
+}
+.contact-form{
+    --form-ok-color:#4caf50;
+    --form-error-color:#F44336;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%; 
+}
+.contact-form > * {
+    padding: 0.5rem;
+    margin: 1rem auto;
+    display: block;
+    width: 100%;
+}
+.contact-form textarea {
+    resize: none;
+}
+.contact-form input[type='submit']{
+    width: 50%;
+    font-weight: bold;
+    cursor: pointer
+;}
+.contact-form input,
+.contact-form textarea {
+    font-size: 1rem;
+    font-family: var(--font-fami1);
+}
+.contact-form *::placeholder{
+    color: #000;
+}
+.contact-form [required]:valid{
+    border: thin solid var(--form-ok-color);
+}
+.contact-form [required]:invalid{
+    border: thin solid var(--form-error-color);
+}
+
+/* Span form*/
+.contact-form-error{
+    margin-top:-1rem;
+    font-size: 80%;
+    background-color: var(--form-error-color);
+    color:#000;
+    transition: all 800ms ease;
+    text-align: center;
+}
+.contact-form-error.is-active{
+display: block;
+animation: show-message 1s 1 normal 0s ease-out both;
+}
+.none{
+    display: none;
+}
+
+/*animacion para los mensajes de error*/
+@keyframes show-message{
+    0%{
+        visibility: hidden;
+        opacity: 0;
+    }
+    100%{
+        visibility: visible;
+        opacity: 1;
+    }
+}
+
+.contact-form legend,
+.contact-form .contact-form-response{
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+/*mediaQ Desktop*/
+
+@media screen and (min-width: 1024px){
+    body{
+        display: grid;
+        grid-template-columns:80% 20%;
+        grid-template-rows:4rem auto;
+        grid-template-areas: "header header"
+                             "main panel";
+    }
+    header{
+        grid-area: header;
+        z-index: 3;
+    }
+    main{
+        grid-area: main;
+    }
+
+    .panel-menu{
+        grid-area: panel;
+        background-color: var(--fondo-body);
+        position: sticky;
+        justify-content: flex-start;
+        top:4rem;
+        transform: translate(0,0);
+        z-index: 2;
+    }
+    .panel-menu .ctn-link .link-secciones{
+        justify-content: start;
+        text-align: center;
+    }
+    .ctn-link .link-secciones a{
+        padding: 0.75rem;
+    }
+    .panel-menu .ctn-link .active{
+        background-color: lightcoral;
+    }
+
+    .ctn-link .link-secciones h2{
+        font-size: var(--font-size2);
+    }
+    .btn-menu{
+        display: none;
+    }
+    .btn-scroll{
+    bottom:1vh;
+    left:calc(2vw + 5vw);
+    }
+    .ctn-ball{
+    width: 60vw;
+    }
 }

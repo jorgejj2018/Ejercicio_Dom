@@ -3,7 +3,7 @@ const d = document;
 export function clock(clock,btnPlay,btnStop){
     let intervalClok;
     d.addEventListener('click', e =>{
-        console.log(e.taget)
+       // console.log(e.taget)
         if (e.target.matches(btnPlay)) {
             intervalClok = setInterval(() => {
                 let clockHr = new Date().toLocaleTimeString();
